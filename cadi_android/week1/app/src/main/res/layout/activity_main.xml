@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.amco1.cadi.MainActivity">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="4"
+        android:background="#ff00aa">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="자기 소개 페이지"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffff00">
+        <LinearLayout
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:src="@drawable/picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:background="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#ffffff"
+                android:text="이름:이광혁"/>
+
+        </LinearLayout>
+    </LinearLayout>
+<FrameLayout
+    android:background="#ff00ff"
+    android:layout_weight="4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:text="확인"
+        android:id="@+id/btn"
+        android:layout_gravity="bottom|right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</FrameLayout>
+
+</LinearLayout>
