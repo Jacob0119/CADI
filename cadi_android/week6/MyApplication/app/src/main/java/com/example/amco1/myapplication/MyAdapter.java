@@ -49,7 +49,7 @@ public class MyAdapter extends BaseAdapter {
 
         TextView name=(TextView)convertView.findViewById(R.id.stu_name);
         TextView number=(TextView) convertView.findViewById(R.id.stu_number);
-
+  //aaa
         final Student s=(Student)getItem(position);
         name.setText(s.getName());
         number.setText(s.getNumber()+"");
