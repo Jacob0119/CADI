@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,7 +42,7 @@ public class MyAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
 
         convertView= LayoutInflater.from(context).inflate(R.layout.my_view_layout,parent,false);
@@ -49,9 +50,21 @@ public class MyAdapter extends BaseAdapter {
         TextView name=(TextView)convertView.findViewById(R.id.stu_name);
         TextView number=(TextView) convertView.findViewById(R.id.stu_number);
 
-        Student s=(Student)getItem(position);
+        final Student s=(Student)getItem(position);
         name.setText(s.getName());
         number.setText(s.getNumber()+"");
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,s.getName(),Toast.LENGTH_LONG).show();
+            }
+        });
         return convertView;
+
+
+
+
+
     }
 }
